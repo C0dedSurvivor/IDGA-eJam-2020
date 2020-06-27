@@ -14,9 +14,4 @@ public class DialogueSpriteSwitch : DialogueNode
         this.target = target;
         newTexture = newTextureName;
     }
-
-    public override DialogueNode GetNext()
-    {
-        return dialoguePath?[0];
-    }
 }

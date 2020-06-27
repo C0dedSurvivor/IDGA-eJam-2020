@@ -7,6 +7,7 @@ public class TextAnimator : MonoBehaviour
 
     private string currentLine = null;
     private float timer = 0;
+    private KeyCode continueKey = KeyCode.Return;
     [SerializeField]
     private Text speaker;
     [SerializeField]
@@ -37,7 +38,7 @@ public class TextAnimator : MonoBehaviour
             }
             else
                 timer += Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Return) && currentLine == text.text)
+            if (Input.GetKeyDown(continueKey) && currentLine == text.text)
             {
                 speaker.text = "";
                 text.text = "";
@@ -60,6 +61,7 @@ public class TextAnimator : MonoBehaviour
             speaker.text = line.speaker;
         text.text = "";
         currentLine = line.line;
+        continueKey = line.continueKey;
     }
 
     /// <summary>

@@ -10,9 +10,4 @@ class DialogueWaitForButton : DialogueNode
     {
         this.key = key;
     }
-
-    public override DialogueNode GetNext()
-    {
-        return dialoguePath?[0];
-    }
 }

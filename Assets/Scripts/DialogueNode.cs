@@ -13,5 +13,8 @@ public abstract class DialogueNode
     /// Gets the next node to act on in this chain if there is one
     /// </summary>
     /// <returns>The next node if it exists, null if it doesn't</returns>
-    public abstract DialogueNode GetNext();
+    public DialogueNode GetNext()
+    {
+        return dialoguePath?[0];
+    }
 }

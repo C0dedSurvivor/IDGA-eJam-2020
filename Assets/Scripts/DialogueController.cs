@@ -27,12 +27,12 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(animatingText && textAnimator.Done)
+        if (animatingText && textAnimator.Done)
         {
             animatingText = false;
             ToNextNode();
         }
-        else if(waitingForKey.HasValue && Input.GetKeyDown(waitingForKey.Value))
+        else if (waitingForKey.HasValue && Input.GetKeyDown(waitingForKey.Value))
         {
             waitingForKey = null;
             ToNextNode();
@@ -88,6 +88,22 @@ public class DialogueController : MonoBehaviour
             else if (next is DialogueWaitForButton)
             {
                 waitingForKey = (next as DialogueWaitForButton).key;
+            }
+            else if (next is DialogueShowObject)
+            {
+                (next as DialogueShowObject).target.SetActive(true);
+                ToNextNode();
+            }
+            else if (next is DialogueHideObject)
+            {
+                (next as DialogueHideObject).target.SetActive(false);
+                ToNextNode();
+            }
+            else if (next is DialogueMoveObject)
+            {
+                DialogueMoveObject trueNext = next as DialogueMoveObject;
+                trueNext.target.transform.position = trueNext.position;
+                ToNextNode();
             }
         }
     }
