@@ -72,6 +72,11 @@ public class DialogueController : MonoBehaviour
                 textAnimator.Enqueue(next as DialogueLine);
                 animatingText = true;
             }
+            else if (next is DialogueSpriteSwitch)
+            {
+                DialogueSpriteSwitch trueNext = next as DialogueSpriteSwitch;
+                trueNext.target.sprite = GameStorage.sprites[trueNext.newTexture];
+            }
         }
     }
 
