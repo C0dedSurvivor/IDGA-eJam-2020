@@ -18,9 +18,6 @@ public class DialogueController : MonoBehaviour
     {
         if (textAnimator == null)
             textAnimator = GetComponent<TextAnimator>();
-        Enqueue(new DialogueLine("Speaker 1", "Hi, I'm speaking now."));
-        Enqueue(new DialogueLine("Speaker 2", "And now I'm speaking."));
-        Enqueue(new DialogueLine("Todd", "Buy Skyrim."));
     }
 
     /// <summary>
@@ -32,6 +29,18 @@ public class DialogueController : MonoBehaviour
         {
             animatingText = false;
             ToNextNode();
+        }
+    }
+
+    /// <summary>
+    /// Adds and starts the dialogue tree from an interactable if this is not already in use
+    /// </summary>
+    /// <param name="interactableName">The name of the dialogue tree to display</param>
+    public void StartDialogue(string interactableName)
+    {
+        if (Done)
+        {
+            Enqueue(GameStorage.interactableDialogues[interactableName]);
         }
     }
 
@@ -67,22 +76,13 @@ public class DialogueController : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds a text event to the queue of text to show
-    /// </summary>
-    /// <param name="message">The text event to display</param>
-    public void Enqueue(string message)
-    {
-        Enqueue(new DialogueLine(message));
-    }
-
-    /// <summary>
     /// Adds a dialog set to the queue of text to show
     /// </summary>
-    /// <param name="line">The dialog set to display</param>
-    public void Enqueue(DialogueNode line)
+    /// <param name="lines">The dialog set to display</param>
+    public void Enqueue(List<DialogueNode> lines)
     {
-        toDisplay.Add(line);
-        if (toDisplay.Count == 1)
+        toDisplay.AddRange(lines);
+        if (toDisplay.Count == lines.Count)
             ProcessNewNode();
     }
 }
