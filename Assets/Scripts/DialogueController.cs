@@ -8,6 +8,8 @@ public class DialogueController : MonoBehaviour
     private TextAnimator textAnimator;
     //If dialogue is currently happening, makes sure it doesn't interrupt it with a new line
     private bool animatingText = false;
+    //If dialogue is waiting on a key input to continue, what key it's waiting for
+    private KeyCode? waitingForKey = null;
 
     /// <summary>
     /// Is true if the text animator is done displaying all text from the queue
@@ -28,6 +30,11 @@ public class DialogueController : MonoBehaviour
         if(animatingText && textAnimator.Done)
         {
             animatingText = false;
+            ToNextNode();
+        }
+        else if(waitingForKey.HasValue && Input.GetKeyDown(waitingForKey.Value))
+        {
+            waitingForKey = null;
             ToNextNode();
         }
     }
@@ -76,6 +83,11 @@ public class DialogueController : MonoBehaviour
             {
                 DialogueSpriteSwitch trueNext = next as DialogueSpriteSwitch;
                 trueNext.target.sprite = GameStorage.sprites[trueNext.newTexture];
+                ToNextNode();
+            }
+            else if (next is DialogueWaitForButton)
+            {
+                waitingForKey = (next as DialogueWaitForButton).key;
             }
         }
     }

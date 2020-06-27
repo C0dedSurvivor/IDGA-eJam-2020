@@ -21,7 +21,10 @@ class GameStorage : MonoBehaviour
                 new DialogueLine("Speaker 1", "Hi, I'm speaking now."),
                 new DialogueLine("Speaker 2", "And now I'm speaking."),
                 new DialogueLine("Todd", "Buy Skyrim."),
-                new DialogueSpriteSwitch(dialogueBackground, "check_mark")
+                new DialogueSpriteSwitch(dialogueBackground, "check_mark"),
+                new DialogueLine("Todd", "Press the T key to continue."),
+                new DialogueWaitForButton(KeyCode.T),
+                new DialogueLine("Todd", "Good, good."),
             }
             );
 
