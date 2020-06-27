@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 class GameStorage : MonoBehaviour
 {
@@ -11,7 +12,7 @@ class GameStorage : MonoBehaviour
     private List<Sprite> spriteLoader = new List<Sprite>();
 
     [SerializeField]
-    private SpriteRenderer dialogueBackground;
+    private Image dialogueBackground;
 
     void Start()
     {
