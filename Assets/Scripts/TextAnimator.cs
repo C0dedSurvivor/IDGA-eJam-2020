@@ -51,15 +51,6 @@ public class TextAnimator : MonoBehaviour
     }
 
     /// <summary>
-    /// Adds a text event to the queue of text to show
-    /// </summary>
-    /// <param name="message">The text event to display</param>
-    public void Enqueue(string message)
-    {
-        currentLine = message;
-    }
-
-    /// <summary>
     /// Adds a dialog set to the queue of text to show
     /// </summary>
     /// <param name="line">The dialog set to display</param>
