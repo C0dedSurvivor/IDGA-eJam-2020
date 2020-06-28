@@ -18,7 +18,7 @@ class GameStorage : MonoBehaviour
     [SerializeField]
     private GameObject wateringCan;
     [SerializeField]
-    private Image treeBackground;
+    private Image background;
     [SerializeField]
     private List<GameObject> wateringCanButtons;
     [SerializeField]
@@ -242,7 +242,7 @@ class GameStorage : MonoBehaviour
                     new DialogueShowObject(wateringCan),
                     new DialoguePause(1),
                     new DialogueHideObject(wateringCan),
-                    new DialogueSpriteSwitch(treeBackground, "tree2Background"),
+                    new DialogueSpriteSwitch(background, "tree2Background"),
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
                     new DialogueLine("Parent", "I always thought you were going to end up with that friend of yours, I liked them a lot."),
@@ -258,7 +258,7 @@ class GameStorage : MonoBehaviour
                     new DialogueShowObject(wateringCan),
                     new DialoguePause(1),
                     new DialogueHideObject(wateringCan),
-                    new DialogueSpriteSwitch(treeBackground, "tree3Background"),
+                    new DialogueSpriteSwitch(background, "tree3Background"),
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
                     new DialogueLine("Parent", "You can still be friends with them, I just don’t know if you should be with them..."),
@@ -274,7 +274,7 @@ class GameStorage : MonoBehaviour
                     new DialogueShowObject(wateringCan),
                     new DialoguePause(1),
                     new DialogueHideObject(wateringCan),
-                    new DialogueSpriteSwitch(treeBackground, "tree4Background"),
+                    new DialogueSpriteSwitch(background, "tree4Background"),
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
                     new DialogueLine("Parent", "Could you please explain to me your feelings for them?"),
@@ -290,7 +290,7 @@ class GameStorage : MonoBehaviour
                     new DialogueShowObject(wateringCan),
                     new DialoguePause(1),
                     new DialogueHideObject(wateringCan),
-                    new DialogueSpriteSwitch(treeBackground, "tree5Background"),
+                    new DialogueSpriteSwitch(background, "tree5Background"),
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
                     new DialogueLine("Parent", "I.. I love you. You’re the child I raised, and I’ll try to set aside my opinions and support you."),
@@ -402,6 +402,8 @@ class GameStorage : MonoBehaviour
                     new DialogueSpriteSwitch(dialogueBackground, "allDialogueBox"),
                     new DialogueLine("All", "If you can do that, you'll really live a life worth celebrating!"),
                     new DialogueHideObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(background, "EndScreen"),
+                    new DialogueLine("", ""),
                     }
                     );
                 break;

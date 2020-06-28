@@ -802,12 +802,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 20bf48c2a1c0cd74499f65f46296fc6a, type: 3}
   dialogueBackground: {fileID: 550967577}
   wateringCan: {fileID: 1948547602}
-  treeBackground: {fileID: 257477579}
+  background: {fileID: 257477579}
   wateringCanButtons:
   - {fileID: 103312614}
   - {fileID: 2084294625}
   - {fileID: 1037626117}
   - {fileID: 2101045691}
+  speakers: []
 --- !u!114 &1572851423
 MonoBehaviour:
   m_ObjectHideFlags: 0

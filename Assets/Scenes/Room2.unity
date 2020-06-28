@@ -414,6 +414,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0694f12c47c43a249b3524ec7451d14b, type: 3}
   - {fileID: 21300000, guid: d9b99b3c655541a4ea4d0501ae55ef3a, type: 3}
   dialogueBackground: {fileID: 593247008}
+  wateringCan: {fileID: 0}
+  treeBackground: {fileID: 0}
+  wateringCanButtons: []
+  speakers: []
 --- !u!114 &158345172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +433,7 @@ MonoBehaviour:
   startingDialogue: room2Start
   remainingInteractables: 3
   endingDialogue: room2End
-  nextSceneName: 
+  nextSceneName: TreeRoom
   dialogueController: {fileID: 158345174}
   interactableList:
   - {fileID: 953525484}

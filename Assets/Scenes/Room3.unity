@@ -302,8 +302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dde8b7b6e4483499db0f3ad7c4ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOverSprite: {fileID: 21300000, guid: df3f7de4b00e1e1458ad6d3790195320, type: 3}
-  mouseLeaveSprite: {fileID: 21300000, guid: 6b755a087ad24974bab86f73652a61f2, type: 3}
+  mouseOverSprite: {fileID: 21300000, guid: 095e7424167db9f4a9b69bfb804d21e5, type: 3}
+  mouseLeaveSprite: {fileID: 21300000, guid: 7140ef09c0b815741add28e867b02b91, type: 3}
 --- !u!61 &226697122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 326, y: 394}
+  m_Size: {x: 107, y: 166}
   m_EdgeRadius: 0
 --- !u!114 &226697123
 MonoBehaviour:
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b755a087ad24974bab86f73652a61f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7140ef09c0b815741add28e867b02b91, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -437,8 +437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -782, y: 332}
-  m_SizeDelta: {x: 326, y: 394}
+  m_AnchoredPosition: {x: 9, y: -94}
+  m_SizeDelta: {x: 107, y: 166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &825871170
 GameObject:
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2164c6add4903cd4da55d8c54cb0ca7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0766872d1f5e4441844e57f7ea3d82d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -781,7 +781,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d33de738de92bab4aa65d9488d5d514a, type: 3}
   dialogueBackground: {fileID: 1901385766}
   wateringCan: {fileID: 0}
-  treeBackground: {fileID: 0}
+  background: {fileID: 0}
   wateringCanButtons: []
   speakers: []
 --- !u!114 &1401564490
@@ -799,7 +799,7 @@ MonoBehaviour:
   startingDialogue: room3Start
   remainingInteractables: 3
   endingDialogue: room3End
-  nextSceneName: 
+  nextSceneName: Platformer
   dialogueController: {fileID: 1401564492}
   interactableList:
   - {fileID: 2052798868}
@@ -1027,8 +1027,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dde8b7b6e4483499db0f3ad7c4ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOverSprite: {fileID: 21300000, guid: d63e6938fb1435c45ae37b566803d690, type: 3}
-  mouseLeaveSprite: {fileID: 21300000, guid: f747b9e0e93358942ba665add32177bd, type: 3}
+  mouseOverSprite: {fileID: 21300000, guid: 649dfce02a00f2846b12d6fdf78c7aba, type: 3}
+  mouseLeaveSprite: {fileID: 21300000, guid: 3a1278914b23b8f4b837e08a429900dc, type: 3}
 --- !u!61 &2052798869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1053,7 +1053,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 124, y: 165}
+  m_Size: {x: 309, y: 311}
   m_EdgeRadius: 0
 --- !u!114 &2052798870
 MonoBehaviour:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f747b9e0e93358942ba665add32177bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a1278914b23b8f4b837e08a429900dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1162,8 +1162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332, y: 188.8}
-  m_SizeDelta: {x: 124, y: 165}
+  m_AnchoredPosition: {x: 271, y: 316}
+  m_SizeDelta: {x: 309, y: 311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2062108608
 GameObject:
@@ -1198,8 +1198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55dde8b7b6e4483499db0f3ad7c4ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseOverSprite: {fileID: 21300000, guid: 16f1952e9dce7ce4081e3fff25a9bb8a, type: 3}
-  mouseLeaveSprite: {fileID: 21300000, guid: 408c3fb936cfd194897d11dea9541667, type: 3}
+  mouseOverSprite: {fileID: 21300000, guid: de6cbed1155d403439feb1d17f814dd6, type: 3}
+  mouseLeaveSprite: {fileID: 21300000, guid: 2fa6c2308e373574f86223e4ff568f84, type: 3}
 --- !u!61 &2062108610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 152, y: 300}
+  m_Size: {x: 562, y: 393}
   m_EdgeRadius: 0
 --- !u!114 &2062108611
 MonoBehaviour:
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 408c3fb936cfd194897d11dea9541667, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fa6c2308e373574f86223e4ff568f84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1333,8 +1333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312, y: 390}
-  m_SizeDelta: {x: 152, y: 300}
+  m_AnchoredPosition: {x: -650, y: 318}
+  m_SizeDelta: {x: 562, y: 393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2096304486
 GameObject:

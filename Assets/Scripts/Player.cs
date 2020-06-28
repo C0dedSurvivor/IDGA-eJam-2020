@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SocialPlatforms.GameCenter;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -32,24 +29,31 @@ public class Player : MonoBehaviour
 
     public void Move() //Moves the player
     {
-        if(Input.GetKey(KeyCode.LeftArrow)) //Moves the player left
+        if (Input.GetKey(KeyCode.LeftArrow)) //Moves the player left
         {
             rBody.velocity = new Vector2(-2, rBody.velocity.y);
         }
 
-        if(Input.GetKey(KeyCode.RightArrow)) //Moves the player right
+        if (Input.GetKey(KeyCode.RightArrow)) //Moves the player right
         {
             rBody.velocity = new Vector2(2, rBody.velocity.y);
         }
 
-        if (!grounded && rBody.velocity.y == 0)
+        if (rBody.velocity.y == 0)
         {
             grounded = true;
         }
-        if(Input.GetKeyDown(KeyCode.Space) && grounded == true)
+        else
+        {
+            grounded = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
             rBody.AddForce(transform.up * jumpPower);
-            grounded = false;
+        }
+        if(transform.position.y >= 8.5f)
+        {
+            SceneManager.LoadScene("Room4");
         }
     }
 
@@ -57,16 +61,5 @@ public class Player : MonoBehaviour
     {
         position = rBody.position;
         transform.position = position;
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.name == "Platform")
-        {
-            for(int k=0; k < col.contacts.Length; k++)
-            {
-
-            }
-        }
     }
 }
