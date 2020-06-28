@@ -28,4 +28,9 @@ public class MenuController : MonoBehaviour
     {
         creditsPanel.SetActive(true);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
