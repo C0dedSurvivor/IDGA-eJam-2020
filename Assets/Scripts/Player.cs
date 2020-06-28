@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpPower = 300;
+        jumpPower = 325;
         sr = this.GetComponent<SpriteRenderer>();
         position = this.transform.position;
         rBody = this.GetComponent<Rigidbody2D>();
