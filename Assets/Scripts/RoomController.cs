@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -16,7 +17,10 @@ public class RoomController : MonoBehaviour
     private string nextSceneName;
     [SerializeField]
     private DialogueController dialogueController;
+    [SerializeField]
+    private List<Interactable> interactableList;
 
+    private bool isStarting = false;
     private bool isEnding = false;
 
     // Start is called before the first frame update
@@ -28,7 +32,16 @@ public class RoomController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isEnding && remainingInteractables == 0 && dialogueController.Done)
+        if(isStarting && dialogueController.Done)
+        {
+            foreach(Interactable i in interactableList)
+            {
+                i.enabled = true;
+                i.GetComponent<Button>().enabled = true;
+            }
+            isStarting = false;
+        }
+        else if (!isEnding && remainingInteractables == 0 && dialogueController.Done)
         {
             StartCoroutine(RunEndingDialogueAfterDelay(1));
         }
@@ -41,7 +54,6 @@ public class RoomController : MonoBehaviour
     public void InteractableClicked(string dialogueName)
     {
         GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
-        clickedButton.GetComponent<Button>().interactable = false;
         clickedButton.GetComponent<Interactable>().InteractedWith();
         dialogueController.StartDialogue(dialogueName);
         remainingInteractables -= 1;
@@ -51,6 +63,7 @@ public class RoomController : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
+        isStarting = true;
         if (!string.IsNullOrWhiteSpace(startingDialogue))
             dialogueController.StartDialogue(startingDialogue);
     }
