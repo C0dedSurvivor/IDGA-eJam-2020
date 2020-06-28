@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour
@@ -10,6 +11,8 @@ public class DialogueController : MonoBehaviour
     private bool animatingText = false;
     //If dialogue is waiting on a key input to continue, what key it's waiting for
     private KeyCode? waitingForKey = null;
+    //If waiting on a pause to finish
+    private bool paused;
 
     /// <summary>
     /// Is true if the text animator is done displaying all text from the queue
@@ -71,7 +74,7 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void ProcessNewNode()
     {
-        if (toDisplay.Count > 0)
+        if (toDisplay.Count > 0 && !paused)
         {
             DialogueNode next = toDisplay[0];
             if (next is DialogueLine)
@@ -105,6 +108,10 @@ public class DialogueController : MonoBehaviour
                 trueNext.target.transform.position = trueNext.position;
                 ToNextNode();
             }
+            else if (next is DialoguePause)
+            {
+                StartCoroutine(PauseDialogue((next as DialoguePause).seconds));
+            }
         }
     }
 
@@ -117,5 +124,14 @@ public class DialogueController : MonoBehaviour
         toDisplay.AddRange(lines);
         if (toDisplay.Count == lines.Count)
             ProcessNewNode();
+    }
+
+    IEnumerator PauseDialogue(float time)
+    {
+        paused = true;
+        yield return new WaitForSeconds(time);
+
+        paused = false;
+        ToNextNode();
     }
 }
