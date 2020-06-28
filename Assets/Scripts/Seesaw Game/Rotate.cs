@@ -6,8 +6,9 @@ public class Rotate : MonoBehaviour
 {
     // Variables
     // This should be a value between -10 -> 10
-    public float rotation = 0;
-    public float targetrot = 0;
+    private float rotation = 0;
+    [SerializeField]
+    private float targetrot = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class Rotate : MonoBehaviour
     }
 
     // Method for rotating the object
-    public void rotate(float value)
+    public void RotateTo(float value)
     {
         targetrot = value;
     }

@@ -54,7 +54,7 @@ public class RoomController : MonoBehaviour
     public void InteractableClicked(string dialogueName)
     {
         GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
-        clickedButton.GetComponent<Interactable>().InteractedWith();
+        clickedButton?.GetComponent<Interactable>()?.InteractedWith();
         dialogueController.StartDialogue(dialogueName);
         remainingInteractables -= 1;
     }
