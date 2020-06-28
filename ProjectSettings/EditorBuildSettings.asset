@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TreeRoom.unity
     guid: 5dcbfbe503f5ab84d946d7ce184f161d
+  - enabled: 1
+    path: Assets/Scenes/BalanceGame.unity
+    guid: 680c50444ef19804e9a6517e63ac7184
   m_configObjects: {}

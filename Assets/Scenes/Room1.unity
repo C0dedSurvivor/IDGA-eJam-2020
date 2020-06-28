@@ -862,7 +862,7 @@ MonoBehaviour:
   startingDialogue: room1Start
   remainingInteractables: 6
   endingDialogue: room1End
-  nextSceneName: Room2
+  nextSceneName: BalanceGame
   dialogueController: {fileID: 425111149}
   interactableList:
   - {fileID: 221760560}
@@ -887,6 +887,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c05f3f50d81ed94ab0af500a4d78efc, type: 3}
   - {fileID: 21300000, guid: 416e7ec72673e9f40b9506fd821ffd35, type: 3}
   dialogueBackground: {fileID: 1707632821}
+  wateringCan: {fileID: 0}
+  background: {fileID: 0}
+  wateringCanButtons: []
+  speakers: []
 --- !u!1 &514667296
 GameObject:
   m_ObjectHideFlags: 0
