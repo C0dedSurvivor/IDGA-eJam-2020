@@ -17,6 +17,7 @@ class GameStorage : MonoBehaviour
 
     void Start()
     {
+        /*
         interactableDialogues.Add(
             "test interactable", new List<DialogueNode>()
             {
@@ -34,6 +35,7 @@ class GameStorage : MonoBehaviour
                 new DialogueLine("Todd", "That's better."),
             }
             );
+            */
 
         switch (SceneManager.GetActiveScene().name)
         {
@@ -60,9 +62,9 @@ class GameStorage : MonoBehaviour
                     new DialogueSpriteSwitch(dialogueBackground, "passionDialogueBox"),
                     new DialogueLine("Passion", "But is this where you belong? Stuck cooped up in an office? If you have a creative idea in mind you have to work on it now, or else you might not get the chance   to!"),
                     new DialogueSpriteSwitch(dialogueBackground, "productivityDialogueBox"),
-                    new DialogueLine("Productivity", "This is what you’re doing right here, right now. If it becomes a problem, you can change it later, after you’ve ensured you don’t fall behind your peers."),
+                    new DialogueLine("Productivity", "This is what you're doing right here, right now. If it becomes a problem, you can change it later, after you've ensured you don't fall behind your peers."),
                     new DialogueSpriteSwitch(dialogueBackground, "passionDialogueBox"),
-                    new DialogueLine("Passion", "Your projects are important to you though, and you enjoy working on them. It’s important to stay happy."),
+                    new DialogueLine("Passion", "Your projects are important to you though, and you enjoy working on them. It's important to stay happy."),
                     new DialogueSpriteSwitch(dialogueBackground, "productivityDialogueBox"),
                     new DialogueLine("Productivity", "Well why don't we let them decide. Look around to see what we each have to say on the matter."),
                     new DialogueHideObject(dialogueBackground.gameObject),
@@ -84,7 +86,7 @@ class GameStorage : MonoBehaviour
                     {
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "productivityDialogueBox"),
-                    new DialogueLine("Productivity", "Plan out your future, you don’t want to be left aimless."),
+                    new DialogueLine("Productivity", "Plan out your future, you don't want to be left aimless."),
                     new DialogueHideObject(dialogueBackground.gameObject),
                     }
                     );
@@ -104,7 +106,7 @@ class GameStorage : MonoBehaviour
                     {
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "passionDialogueBox"),
-                    new DialogueLine("Passion", "It doesn't matter how good you are now. Start small, you’ll improve as you go!"),
+                    new DialogueLine("Passion", "It doesn't matter how good you are now. Start small, you'll improve as you go!"),
                     new DialogueHideObject(dialogueBackground.gameObject),
                     }
                     );
@@ -124,7 +126,7 @@ class GameStorage : MonoBehaviour
                     {
                     new DialogueShowObject(dialogueBackground.gameObject),
                     new DialogueSpriteSwitch(dialogueBackground, "passionDialogueBox"),
-                    new DialogueLine("Passion", "Always be willing to try something new, you never know when you’ll find something you really enjoy!"),
+                    new DialogueLine("Passion", "Always be willing to try something new, you never know when you'll find something you really enjoy!"),
                     new DialogueHideObject(dialogueBackground.gameObject),
                     }
                     );
@@ -145,6 +147,68 @@ class GameStorage : MonoBehaviour
                     new DialogueLine("Productivity", "Yes! Making time to listen to both of us is very difficult but important. I'm sure you can do it, though."),
                     new DialogueSpriteSwitch(dialogueBackground, "passionDialogueBox"),
                     new DialogueLine("Passion", "We shall see, won't we! Remember, persistence is key!"),
+                    new DialogueHideObject(dialogueBackground.gameObject),
+                    }
+                    );
+                break;
+            case "Room2":
+                interactableDialogues.Add(
+                    "room2Start",
+                    new List<DialogueNode>()
+                    {
+                    new DialogueShowObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
+                    new DialogueLine("Parent", "They're your partner? I want to support you but I'm concerned. I've always dreamed of having grandchildren… You made me so happy, and I just want you to have that happiness..."),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "You'll need to give them time, they'll come to accept it."),
+                    new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
+                    new DialogueLine("Parent", "I just want you to follow what we did, since it worked out so well for us. I just want you to have a good future."),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "We can forge our own destiny, think about what we want from life and reach that together regardless of what others say."),
+                    new DialogueSpriteSwitch(dialogueBackground, "voidDialogueBox"),
+                    new DialogueLine("Parent", "Have you seen your friends? They're already having children. I just want you to be able to have support from them like I did from my friends when I had you."),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "Even if they don't say it, they still love you unconditionally. Let's look around, maybe we can find something to convince them more."),
+                    new DialogueHideObject(dialogueBackground.gameObject),
+                    }
+                    );
+                interactableDialogues.Add(
+                    "room2WateringCan",
+                    new List<DialogueNode>()
+                    {
+                    new DialogueShowObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "Equip yourself with what you need to address the situation properly."),
+                    new DialogueHideObject(dialogueBackground.gameObject),
+                    }
+                    );
+                interactableDialogues.Add(
+                    "room2Plant",
+                    new List<DialogueNode>()
+                    {
+                    new DialogueShowObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "The right space is key to nurture any relationship."),
+                    new DialogueHideObject(dialogueBackground.gameObject),
+                    }
+                    );
+                interactableDialogues.Add(
+                    "room2Sunlight",
+                    new List<DialogueNode>()
+                    {
+                    new DialogueShowObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "They will still be a part of your life, even if you make a decision they don’t agree with."),
+                    new DialogueHideObject(dialogueBackground.gameObject),
+                    }
+                    );
+                interactableDialogues.Add(
+                    "room2End",
+                    new List<DialogueNode>()
+                    {
+                    new DialogueShowObject(dialogueBackground.gameObject),
+                    new DialogueSpriteSwitch(dialogueBackground, "smileyDialogueBox"),
+                    new DialogueLine("Partner", "Ok, you ready to give talking to them a try? Yea? Great! I’m right behind you if you need me."),
                     new DialogueHideObject(dialogueBackground.gameObject),
                     }
                     );

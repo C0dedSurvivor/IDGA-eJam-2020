@@ -26,7 +26,7 @@ public class RoomController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(RunStartingDialogueAfterDelay(1));
+        StartCoroutine(RunStartingDialogueAfterDelay(0.5f));
     }
 
     // Update is called once per frame
@@ -43,11 +43,11 @@ public class RoomController : MonoBehaviour
         }
         else if (!isEnding && remainingInteractables == 0 && dialogueController.Done)
         {
-            StartCoroutine(RunEndingDialogueAfterDelay(1));
+            StartCoroutine(RunEndingDialogueAfterDelay(0.5f));
         }
         else if (isEnding && dialogueController.Done)
         {
-            StartCoroutine(MoveToNextRoomAfterDelay(1));
+            StartCoroutine(MoveToNextRoomAfterDelay(0.5f));
         }
     }
 

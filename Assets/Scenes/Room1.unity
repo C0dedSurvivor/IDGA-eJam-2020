@@ -862,7 +862,7 @@ MonoBehaviour:
   startingDialogue: room1Start
   remainingInteractables: 6
   endingDialogue: room1End
-  nextSceneName: 
+  nextSceneName: Room2
   dialogueController: {fileID: 425111149}
   interactableList:
   - {fileID: 221760560}
