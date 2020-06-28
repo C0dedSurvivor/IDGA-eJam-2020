@@ -10,6 +10,9 @@ class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField]
     private string mouseLeaveSprite;
 
+    //Whether this interactable has been triggered
+    private bool used = false;
+
     /// <summary>
     /// Grab this object's sprite renderer
     /// </summary>
@@ -23,7 +26,8 @@ class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     /// </summary>
     public void OnPointerEnter(PointerEventData eventData)
     {
-        spriteRenderer.sprite = GameStorage.sprites[mouseOverSprite];
+        if(!used)
+            spriteRenderer.sprite = GameStorage.sprites[mouseOverSprite];
     }
 
     /// <summary>
@@ -31,6 +35,12 @@ class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     /// </summary>
     public void OnPointerExit(PointerEventData eventData)
     {
+        spriteRenderer.sprite = GameStorage.sprites[mouseLeaveSprite];
+    }
+
+    public void InteractedWith()
+    {
+        used = true;
         spriteRenderer.sprite = GameStorage.sprites[mouseLeaveSprite];
     }
 }

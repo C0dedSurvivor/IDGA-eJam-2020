@@ -42,12 +42,12 @@ public class DialogueController : MonoBehaviour
     /// <summary>
     /// Adds and starts the dialogue tree from an interactable if this is not already in use
     /// </summary>
-    /// <param name="interactableName">The name of the dialogue tree to display</param>
-    public void StartDialogue(string interactableName)
+    /// <param name="dialogueName">The name of the dialogue tree to display</param>
+    public void StartDialogue(string dialogueName)
     {
         if (Done)
         {
-            Enqueue(GameStorage.interactableDialogues[interactableName]);
+            Enqueue(GameStorage.interactableDialogues[dialogueName]);
         }
     }
 

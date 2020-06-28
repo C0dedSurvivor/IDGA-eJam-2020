@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class MenuController : MonoBehaviour
 
     public void ToGame()
     {
-
+        SceneManager.LoadScene("Room1");
     }
 
     public void ToTitle()
