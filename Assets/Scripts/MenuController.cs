@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField]
+    private GameObject howToPlayPanel;
+    [SerializeField]
     private GameObject creditsPanel;
 
     public void ToGame()
@@ -14,6 +16,12 @@ public class MenuController : MonoBehaviour
     public void ToTitle()
     {
         creditsPanel.SetActive(false);
+        howToPlayPanel.SetActive(false);
+    }
+
+    public void ToHowToPlay()
+    {
+        howToPlayPanel.SetActive(true);
     }
 
     public void ToCredits()

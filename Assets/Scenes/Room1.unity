@@ -884,12 +884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteLoader:
-  - {fileID: 21300000, guid: bb203da58e1a5354baec03904cb3c8f3, type: 3}
-  - {fileID: 21300000, guid: 416e7ec72673e9f40b9506fd821ffd35, type: 3}
   - {fileID: 21300000, guid: 2c05f3f50d81ed94ab0af500a4d78efc, type: 3}
-  - {fileID: 21300000, guid: d33de738de92bab4aa65d9488d5d514a, type: 3}
-  - {fileID: 21300000, guid: d9b99b3c655541a4ea4d0501ae55ef3a, type: 3}
-  - {fileID: 21300000, guid: 0694f12c47c43a249b3524ec7451d14b, type: 3}
+  - {fileID: 21300000, guid: 416e7ec72673e9f40b9506fd821ffd35, type: 3}
   dialogueBackground: {fileID: 1707632821}
 --- !u!1 &514667296
 GameObject:
