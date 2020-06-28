@@ -160,6 +160,20 @@ class GameStorage : MonoBehaviour
                     }
                     );
                 break;
+            case "BalanceGame":
+                interactableDialogues.Add(
+                    "balanceRoomStart",
+                    new List<DialogueNode>()
+                    {
+                    }
+                    );
+                interactableDialogues.Add(
+                    "balanceRoomEnd",
+                    new List<DialogueNode>()
+                    {
+                    }
+                    );
+                break;
             case "Room2":
                 interactableDialogues.Add(
                     "room2Start",
