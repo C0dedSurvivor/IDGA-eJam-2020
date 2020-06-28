@@ -368,9 +368,9 @@ class GameStorage : MonoBehaviour
                     }
                     );
                 break;
-            case "Room4Start":
+            case "Room4":
                 interactableDialogues.Add(
-                    "room4End",
+                    "room4Start",
                     new List<DialogueNode>()
                     {
                     new DialogueShowObject(dialogueBackground.gameObject),
@@ -402,6 +402,7 @@ class GameStorage : MonoBehaviour
                     new DialogueSpriteSwitch(dialogueBackground, "allDialogueBox"),
                     new DialogueLine("All", "If you can do that, you'll really live a life worth celebrating!"),
                     new DialogueHideObject(dialogueBackground.gameObject),
+                    new DialogueHideObject(speakers[6]),
                     new DialogueSpriteSwitch(background, "EndScreen"),
                     new DialogueLine("", ""),
                     }

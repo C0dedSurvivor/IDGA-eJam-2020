@@ -1398,7 +1398,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fa94711f6e1484c41af3b7cfd6aa8944, type: 3}
   dialogueBackground: {fileID: 2077511197}
   wateringCan: {fileID: 0}
-  background: {fileID: 0}
+  background: {fileID: 559525085}
   wateringCanButtons: []
   speakers:
   - {fileID: 2092318302}
